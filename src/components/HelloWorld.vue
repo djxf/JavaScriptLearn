@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button v-bind="test()" v-on="test()">按钮</button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -35,6 +36,40 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods : {
+     test() {
+       var colors = new Array();
+       colors.push(1);
+       colors.push(new Object());
+       colors.push({
+         name: "yindingjian2222",
+         age: 23
+       })
+       console.log(colors[2].name)
+       var color2 = ["red", "blue", "green"]
+       alert(color2[0])
+       color2[color2.length] = "gray"
+       if (color2 instanceof Array) {
+         alert("color2 is Array!")
+       }
+       if (Array.isArray(color2)) {
+         console.log("Array.isArray('color2')");
+       }
+
+       var array3 = [1, 3, 4, 5, 6, 10, 11, 12]
+      
+       console.log(array3.sort(this.compare));
+     }, 
+     compare(value1, value2) {
+       if (value1 > value2) {
+         return 1
+       } else if (value1 < value2) {
+         return -1
+       } else {
+         return 0
+       }
+     } 
   }
 }
 </script>
