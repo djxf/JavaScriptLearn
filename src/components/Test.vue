@@ -42,6 +42,18 @@ export default {
                     return 0;
                 }
             }
+        },
+        factorial(num) {
+            if (num <= 1) {
+                return 1;
+            } else {
+                return num * arguments.callee(num - 1)
+            }
+        },
+        ftest() {
+            var s1 = "some text"
+            var s2 = s1.substring(2)
+            
         }
     }
 }
