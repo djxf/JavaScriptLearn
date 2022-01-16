@@ -53,7 +53,7 @@ export default {
         ftest() {
             var s1 = "some text"
             var s2 = s1.substring(2)
-            
+            eval("alert('hi')")
         }
     }
 }
