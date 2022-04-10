@@ -1,13 +1,16 @@
 <template>
-  <go></go>
+   <flex-dome-vue>
+     </flex-dome-vue>
 </template>
--
+     
 <script>
-import go from './components/go.vue'
+import flexDomeVue from './components/flexDome.vue'
+// import go from './components/go.vue'
 export default {
   name: 'App',
   components: {
-    go 
+    // go,
+    flexDomeVue
   },
   mounted() {
     
